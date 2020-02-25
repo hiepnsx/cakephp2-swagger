@@ -1,10 +1,7 @@
 <?php
 
-if (!Configure::read('swagger')) {
-    Configure::write('swagger', [
-        'paths' => [
-            ROOT . DS . APP_DIR . DS . 'Controller',
-            ROOT . DS . APP_DIR . DS . 'Config'
-        ]
-    ]);
+$swaggerConfig = 'swagger';
+$configPath = APP . 'Config' . DS . $swaggerConfig . '.php';
+if (file_exists($configPath)) {
+	Configure::load($swaggerConfig, 'default');
 }

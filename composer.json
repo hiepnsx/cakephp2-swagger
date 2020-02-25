@@ -5,7 +5,7 @@
     "homepage": "https://github.com/hiepnsx/cakephp2-swagger",
     "require": {
         "php": ">=5.6.0",
-        "zircote/swagger-php": "^2.0"
+        "zircote/swagger-php": "^3.0"
     },
     "extra": {
         "installer-name": "CakePHP2Swagger"

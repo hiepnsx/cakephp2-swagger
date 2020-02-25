@@ -1,24 +1,19 @@
 <?php
 
 Router::connect(
-    '/docs',
+    '/json',
     [
-        'plugin' => 'Swagger',
+        'plugin' => 'CakePHP2Swagger',
         'controller' => 'Swagger',
-        'action' => 'genDocs'
+        'action' => 'json'
     ]
 );
 
 Router::connect(
-    '/docs/:resource',
+    '/specs',
     [
-        'plugin' => 'Swagger',
+        'plugin' => 'CakePHP2Swagger',
         'controller' => 'Swagger',
-        'action' => 'genDocs'
-    ],
-    [
-        'pass' => [
-            'resource'
-        ]
+        'action' => 'specs'
     ]
 );
